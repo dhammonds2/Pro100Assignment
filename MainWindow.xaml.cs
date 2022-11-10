@@ -24,5 +24,11 @@ namespace ProjectAstroClass
         {
             InitializeComponent();
         }
+        private void cboDroneMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
+
+
 }

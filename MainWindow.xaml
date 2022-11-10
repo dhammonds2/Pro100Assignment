@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectAstroClass"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Project /\stro Drone Builder" Height="450" Width="800"
+        x:Name="Main_Window"
+        Background="Beige"
+        >
 
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- * = size proportional to grid
+            auto = -->
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="viewBuild" HorizontalAlignment="Left" Width="100" Height="40" Margin="139,290,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.506,0.588"></Button>
+        <ComboBox x:Name="cboDroneMenu" Height="30" Grid.Row="0" Grid.Column="0" SelectionChanged="cboDroneMenu_SelectionChanged">
+            <ComboBoxItem Content="Armors" />
+            <ComboBoxItem Content="Chassis" />
+            <ComboBoxItem Content="Modules" />
+
+        </ComboBox>
     </Grid>
 </Window>
