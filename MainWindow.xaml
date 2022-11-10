@@ -24,7 +24,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Button x:Name="viewBuild" HorizontalAlignment="Left" Width="100" Height="40" Margin="139,290,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.506,0.588"></Button>
-        <ComboBox x:Name="cboDroneMenu" Height="30" Grid.Row="0" Grid.Column="0" SelectionChanged="cboDroneMenu_SelectionChanged" Text="Drone Parts">
+        <ComboBox x:Name="cboDroneMenu" Height="30" Grid.Row="0" Grid.Column="0" SelectionChanged="cboDroneMenu_SelectionChanged">
             <ComboBoxItem Content="Armors" />
             <ComboBoxItem Content="Chassis" />
             <ComboBoxItem Content="Modules" />
