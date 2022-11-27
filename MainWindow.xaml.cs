@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectAstroClass.BackgroundClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,20 @@ namespace ProjectAstroClass
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private Armor[] ArmorChoices = { };
+        private Chassis[] ChassisChoices = { };
+        private Utility[] UtilityChoices = { };
+        private Weaponry[] WeaponryChoices = { };
+        private Mobility[] MobilityChoices = { };
+        private int[] Index = { };
+
+
         public MainWindow()
         {
             InitializeComponent();
+            Drone drone = new Drone();
+            this.DataContext = drone;
         }
         private void cboDroneMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
