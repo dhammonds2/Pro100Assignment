@@ -40,6 +40,11 @@ namespace ProjectAstroClass
         {
 
         }
+
+        private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
 

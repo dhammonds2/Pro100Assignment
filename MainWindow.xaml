@@ -23,8 +23,11 @@
         </Grid.RowDefinitions>
         <Button x:Name="viewBuild" HorizontalAlignment="Left" Width="63" Height="19" 
                 Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.506,0.588">Save</Button>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,147,10,10"/>
-        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="Drone Name" VerticalAlignment="Top" Width="247" Height="48" FontFamily="Arial Black" FontSize="24"/>
+        <ListBox x:Name="outList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,147,10,10"/>
+        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="Drone Name" VerticalAlignment="Top" Width="247" Height="48" FontFamily="Arial Black" FontSize="24" TextChanged="NameBox_TextChanged"/>
+        <DockPanel LastChildFill="False" Margin="10,87,10,292">
+            <TextBlock x:Name="CoreHP" TextWrapping="Wrap" Text="TextBlock" Width="50" Background="DarkGray"/>
+        </DockPanel>
 
     </Grid>
 </Window>
