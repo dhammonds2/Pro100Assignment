@@ -22,12 +22,97 @@
 
         </Grid.RowDefinitions>
         <Button x:Name="viewBuild" HorizontalAlignment="Left" Width="63" Height="19" 
-                Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.506,0.588">Save</Button>
+                Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.506,0.588" Click="saveBuild">Save</Button>
         <ListBox x:Name="outList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,147,10,10"/>
         <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="Drone Name" VerticalAlignment="Top" Width="247" Height="48" FontFamily="Arial Black" FontSize="24" TextChanged="NameBox_TextChanged"/>
         <DockPanel LastChildFill="False" Margin="10,87,10,292">
             <TextBlock x:Name="CoreHP" TextWrapping="Wrap" Text="TextBlock" Width="50" Background="DarkGray"/>
+            <TextBlock x:Name="Power" TextWrapping="Wrap" Text="TextBlock" Background="DarkGray" Width="50"/>
+            <TextBlock x:Name="PowerPerRound" TextWrapping="Wrap" Text="TextBlock" Background="DarkGray"  Width="50"/>
+            
         </DockPanel>
+        <Menu Grid.Column="1" Margin="74,34,74,342">
+            <MenuItem Header="DT1">
+                <MenuItem Header="Chassis" >
+                    <MenuItem Header="Tempest 50 - Combat Chassis"></MenuItem>
+                    <MenuItem Header="77 Access - Technical Chassis"></MenuItem>
+                    <MenuItem Header="Streaker Alpha - Mobility Chassis"></MenuItem>
+                    <MenuItem Header="Maelstrom X70 - Maintenance Chassis"></MenuItem>
+                    <MenuItem Header="Clock Tower - Defense Chassis"></MenuItem>
+                    <MenuItem Header="DTT (Double Team) Barge - Cargo Chassis"></MenuItem>
+
+                </MenuItem>
+                <MenuItem Header="Modules" >
+                    <MenuItem Header="Utility">
+                        <MenuItem Header="Variable Intra-Strata Processor (VISP)"></MenuItem>
+                        <MenuItem Header="Emergency Field Maintenance Unit (EFMU)"></MenuItem>
+                        <MenuItem Header="Auxiliary Capacitor"></MenuItem>
+                        <MenuItem Header="Power Bank"></MenuItem>
+                        <MenuItem Header="Interface Control Plug"></MenuItem>
+                        <MenuItem Header="Kinetic Alternator"></MenuItem>
+                        <MenuItem Header="Angle Saw"></MenuItem>
+                        <MenuItem Header="Wiring Tool"></MenuItem>
+                        <MenuItem Header="Loudspeaker"></MenuItem>
+                        <MenuItem Header="Plasma Cutter"></MenuItem>
+                        <MenuItem Header="Emergency Shutdown Unit"></MenuItem>
+                        <MenuItem Header="Compressor"></MenuItem>
+                        <MenuItem Header="Welding Tool"></MenuItem>
+                        <MenuItem Header="Claw Hand"></MenuItem>
+                        <MenuItem Header="PackerPointer"></MenuItem>
+                        <MenuItem Header="Fluid Tank"></MenuItem>
+                        <MenuItem Header="Fuel Cells"></MenuItem>
+                        <MenuItem Header="Node Lines"></MenuItem>
+                        <MenuItem Header="Backup Core Cooler (BCC)"></MenuItem>
+                        <MenuItem Header="Core Protector"></MenuItem>
+                        <MenuItem Header="Ammunitions Storage"></MenuItem>
+                        <MenuItem Header="Bio Scanner"></MenuItem>
+                        <MenuItem Header="Motion Scanner"></MenuItem>
+                        <MenuItem Header="Bumper"></MenuItem>
+                        <MenuItem Header="Projector Unit"></MenuItem>
+                        <MenuItem Header="Mobile Shield Arm"></MenuItem>
+                        <MenuItem Header="Storage Box"></MenuItem>
+                        <MenuItem Header="Ammunitions Foundry"></MenuItem>
+                        <MenuItem Header="Geiger Counter"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Mobility">
+                        <MenuItem Header="Treads/Wheels"></MenuItem>
+                        <MenuItem Header="Limbs"></MenuItem>
+                        <MenuItem Header="Tether"></MenuItem>
+                        <MenuItem Header="Reaction Control System (RCS)"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Weaponry">
+                        <MenuItem Header="Weapon Types">
+                            <MenuItem Header="Energy">
+                                <MenuItem Header="Laser"></MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="Kinetic">
+                                <MenuItem Header="5mm “Welrod” Suppression Welded Pistol"></MenuItem>
+                                <MenuItem Header="30mm “Freizar” APDS Cannonette"></MenuItem>
+                                <MenuItem Header="12cm “Siege” Neo Cannon"></MenuItem>
+                                <MenuItem Header="H and C “Nebula” Flak Battery"></MenuItem>
+                            </MenuItem>
+                        </MenuItem>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Armor" >
+                    <!--<MenuItem Header="Carbon Fiber Shell - Standard Drone Shell with a Damage threshold of 3, Damage Reactions: [Kinetic] and [Corrosive], HP [12], Cost [10], Weight Class: Light"></MenuItem>-->
+                    <MenuItem Header="Carbon Fiber Shell"></MenuItem>
+                    <MenuItem Header="Aluminum Plating"></MenuItem>
+                    <MenuItem Header="Thick Steel Armor"></MenuItem>
+                    <MenuItem Header="Shockproof Protection Plates (SPA)"></MenuItem>
+                    <MenuItem Header="Heavy Armor"></MenuItem>
+                    <MenuItem Header="Anti-Projectile Armor"></MenuItem>
+                    <MenuItem Header="Reactive Armor"></MenuItem>
+                    <MenuItem Header="Energy Armor"></MenuItem>
+                    <MenuItem Header="Reactive MK2 Armor"></MenuItem>
+                    <MenuItem Header="Advanced Composite Ceramic Armor 'Achilles'"></MenuItem>
+                </MenuItem>
+
+            </MenuItem>
+        </Menu>
+
+
 
     </Grid>
+
 </Window>
