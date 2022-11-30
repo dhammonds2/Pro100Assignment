@@ -31,9 +31,9 @@
         </ListBox>
         <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="Drone Name" VerticalAlignment="Top" Width="247" Height="48" FontFamily="Arial Black" FontSize="24" TextChanged="NameBox_TextChanged"/>
         <DockPanel LastChildFill="False" Margin="10,87,10,292">
-            <TextBlock x:Name="CoreHP" TextWrapping="Wrap" Text="TextBlock" Width="50" Background="DarkGray"/>
-            <TextBlock x:Name="Power" TextWrapping="Wrap" Text="TextBlock" Background="DarkGray" Width="50"/>
-            <TextBlock x:Name="PowerPerRound" TextWrapping="Wrap" Text="TextBlock" Background="DarkGray"  Width="50"/>
+            <TextBlock x:Name="CoreHP" TextWrapping="Wrap" Text="{Binding drone.CoreHP}" Width="50" Background="DarkGray"/>
+            <TextBlock x:Name="Power" TextWrapping="Wrap" Text="{Binding drone.Power}" Background="DarkGray" Width="50"/>
+            <TextBlock x:Name="PowerPerRound" TextWrapping="Wrap" Text="{Binding drone.PPR}" Background="DarkGray"  Width="50"/>
             
         </DockPanel>
         <Menu x:Name="DropMenu" Grid.Column="1" Margin="74,34,74,342">

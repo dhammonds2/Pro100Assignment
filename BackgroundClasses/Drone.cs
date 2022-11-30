@@ -11,15 +11,17 @@ namespace ProjectAstroClass.BackgroundClasses
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public int CoreHp { get; set; }
+        public int CoreHp { get; set; } = 5;
         public Armor[] Armors = {  };
-        public int Power { get; set; }
-        public int PPR { get; set; }
+        public int Power { get; set; } = 100;
+        public int PPR { get; set; } = 10;
         public Module[] Modules = { };
         public Chassis Chassis { get; set; }
         private char[] Directions = { 'F', 'B', 'L', 'R', 'T', 'U' };
 
         public event PropertyChangedEventHandler? PropertyChanged;
+
+
 
         private void PropertyHasChanged(string s)
         {
