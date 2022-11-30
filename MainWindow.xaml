@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectAstroClass"
         mc:Ignorable="d"
+        xmlns:uc="clr-namespace:ProjectAstroClass.UserControls"
         Title="Project /\stro Drone Builder" Height="450" Width="800"
         x:Name="Main_Window"
         Background="Beige"
