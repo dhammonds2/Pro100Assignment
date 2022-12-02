@@ -53,7 +53,36 @@ namespace ProjectAstroClass
         {
 
         }
-    }
+        private static String Search(object value)
+        {
+            Drone drone = new Drone();
+            Boolean quit = false;
+            String searchString = "";
+
+
+            int selection = Int32.Parse(searchString);
+            while (!quit)
+            {
+                switch (selection)
+                {
+                    case 0:
+                        drone.AddModule();
+                        break;
+                    case 1:
+                        drone.AddChassis();
+                        break;
+                    case 2:
+                        drone.AddArmor();
+                        break;
+                    case 3:
+                        drone.CheckSides();
+                        break;
+
+
+
+                }
+            }
+        }
 
 
 }
