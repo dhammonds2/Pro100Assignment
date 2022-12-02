@@ -29,13 +29,16 @@ namespace ProjectAstroClass
         private Mobility[] MobilityChoices = { };
         private int[] Index = { };
 
+        Drone drone;// = new Drone();
 
         public MainWindow()
         {
+            drone = new Drone(); 
             InitializeComponent();
-            Drone drone = new Drone();
             this.DataContext = drone;
         }
+
+
         private void cboDroneMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 

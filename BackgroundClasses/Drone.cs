@@ -19,9 +19,88 @@ namespace ProjectAstroClass.BackgroundClasses
         public Chassis Chassis { get; set; }
         private char[] Directions = { 'F', 'B', 'L', 'R', 'T', 'U' };
 
+        public Drone(string inName, string inDesc, int inCHP = 5, int inPow = 100, int inPPR = 10)
+        {
+            Name = inName;
+            Description = inDesc;
+            CoreHp = inCHP;
+            Power = inPow;
+            PPR = inPPR;
+        }
+
+        public Drone()
+        {
+
+        }
+        
+        void AddModule(Module inModule)
+        {
+            for(int i = 0; i < Modules.Length; i++)
+            {
+                if (Modules[i] != null)
+                {
+                    Modules[i] = inModule;
+
+                    //if ()
+                    //{
+                        // check for specific modules
+                    //}
+                }
+            }
+        }
+
+        void AddChassis(Chassis inChassis)
+        {
+            Chassis = inChassis;
+        }
+
+        /// <summary>
+        /// Takes in armor to add with a direction
+        /// </summary>
+        /// <param name="inArmor"></param>
+        void AddArmor(Armor inArmor)
+        {
+            for (int i = 0; i < Armors.Length; i++)
+            {
+                if (Armors[i] != null)
+                {
+                    Armors[i] = inArmor;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Is used to check if the chosen side slots are all filled up or not.
+        /// </summary>
+        /// <param name="side"></param>
+        /// <returns></returns>
+        bool CheckSides(char side)
+        {
+            int sideCount = 0;
+            for (int i = 0; i < Modules.Length; i++)
+            {
+                if (Modules[i].Direction == side)
+                {
+                    sideCount++;
+                }
+            }
+            int sideIndex = 0;
+            for(int i = 0; i < Directions.Length; i++)
+            {
+                if (side == Directions[i])
+                {
+                    sideIndex = i;
+                }
+            }
+
+            if(sideCount == Directions[sideIndex])
+            {
+                return false;
+            }
+            return true;
+        }
+
         public event PropertyChangedEventHandler? PropertyChanged;
-
-
 
         private void PropertyHasChanged(string s)
         {

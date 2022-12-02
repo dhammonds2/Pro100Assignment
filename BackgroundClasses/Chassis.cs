@@ -12,6 +12,7 @@ namespace ProjectAstroClass.BackgroundClasses
         public int Index { get; set; }
         public string Description { get; set; }
         public int[] SideSlots = { 0, 0, 0, 0, 0, 0 };
+        // { front(F), back(B), left(L), right(R), top(T), bottom(U) }
         public string PermModule { get; set; }
 
         public Chassis(string inName, int inIndex, string inDescription, int[] inSS, string inModule)

@@ -31,13 +31,13 @@
         </ListBox>
         <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="Drone Name" VerticalAlignment="Top" Width="247" Height="48" FontFamily="Arial Black" FontSize="24" TextChanged="NameBox_TextChanged"/>
         <DockPanel LastChildFill="False" Margin="10,87,10,292">
-            <TextBlock x:Name="CoreHP" TextWrapping="Wrap" Text="{Binding drone.CoreHP}" Width="50" Background="DarkGray"/>
-            <TextBlock x:Name="Power" TextWrapping="Wrap" Text="{Binding drone.Power}" Background="DarkGray" Width="50"/>
-            <TextBlock x:Name="PowerPerRound" TextWrapping="Wrap" Text="{Binding drone.PPR}" Background="DarkGray"  Width="50"/>
+            <TextBlock x:Name="CoreHP" TextWrapping="Wrap" Text="{Binding drone.CoreHP}" Width="50" Background="DarkGray" Margin="18,0,15,0"/>
+            <TextBlock x:Name="Power" TextWrapping="Wrap" Text="{Binding drone.Power}" Background="DarkGray" Width="50" Margin="15,0"/>
+            <TextBlock x:Name="PowerPerRound" TextWrapping="Wrap" Text="{Binding drone.PPR}" Background="DarkGray"  Width="50" Margin="15,0"/>
             
         </DockPanel>
         <Menu x:Name="DropMenu" Grid.Column="1" Margin="74,34,74,342">
-            <MenuItem Header="DT1">
+            <MenuItem x:Name="DropMenu1" Header="DT1">
                 <MenuItem Header="Chassis" >
                     <MenuItem Header="Tempest 50 - Combat Chassis"></MenuItem>
                     <MenuItem Header="77 Access - Technical Chassis"></MenuItem>
@@ -47,8 +47,8 @@
                     <MenuItem Header="DTT (Double Team) Barge - Cargo Chassis"></MenuItem>
 
                 </MenuItem>
-                <MenuItem Header="Modules" >
-                    <MenuItem Header="Utility">
+                <MenuItem x:Name="MMenu" Header="Modules" >
+                    <MenuItem x:Name="UMenu" Header="Utility">
                         <MenuItem Header="Variable Intra-Strata Processor (VISP)"></MenuItem>
                         <MenuItem Header="Emergency Field Maintenance Unit (EFMU)"></MenuItem>
                         <MenuItem Header="Auxiliary Capacitor"></MenuItem>
@@ -79,24 +79,22 @@
                         <MenuItem Header="Ammunitions Foundry"></MenuItem>
                         <MenuItem Header="Geiger Counter"></MenuItem>
                     </MenuItem>
-                    <MenuItem Header="Mobility">
+                    <MenuItem x:Name="MoMenu" Header="Mobility">
                         <MenuItem Header="Treads/Wheels"></MenuItem>
                         <MenuItem Header="Limbs"></MenuItem>
                         <MenuItem Header="Tether"></MenuItem>
                         <MenuItem Header="Reaction Control System (RCS)"></MenuItem>
                     </MenuItem>
-                    <MenuItem Header="Weaponry">
-                        <MenuItem Header="Weapon Types">
-                            <MenuItem Header="Energy">
+                    <MenuItem x:Name="WMenu" Header="Weaponry">
+                            <MenuItem x:Name="EMenu" Header="Energy">
                                 <MenuItem Header="Laser"></MenuItem>
                             </MenuItem>
-                            <MenuItem Header="Kinetic">
+                            <MenuItem x:Name="KMenu" Header="Kinetic">
                                 <MenuItem Header="5mm “Welrod” Suppression Welded Pistol"></MenuItem>
                                 <MenuItem Header="30mm “Freizar” APDS Cannonette"></MenuItem>
                                 <MenuItem Header="12cm “Siege” Neo Cannon"></MenuItem>
                                 <MenuItem Header="H and C “Nebula” Flak Battery"></MenuItem>
                             </MenuItem>
-                        </MenuItem>
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Armor" >
