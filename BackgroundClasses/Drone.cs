@@ -19,13 +19,13 @@ namespace ProjectAstroClass.BackgroundClasses
         public Chassis Chassis { get; set; }
         private char[] Directions = { 'F', 'B', 'L', 'R', 'T', 'U' };
 
-        public Drone(string inName, string inDesc, int inCHP = 5, int inPow = 100, int inPPR = 10)
+        public Drone(string inName, int inCHP = 5, int inPow = 100, int inPPR = 10)
         {
             Name = inName;
-            Description = inDesc;
             CoreHp = inCHP;
             Power = inPow;
             PPR = inPPR;
+            Description = "";
         }
 
         public Drone()
@@ -33,6 +33,10 @@ namespace ProjectAstroClass.BackgroundClasses
 
         }
         
+        /// <summary>
+        /// Takes in a module, then adds it to the array.
+        /// </summary>
+        /// <param name="inModule"></param>
         void AddModule(Module inModule)
         {
             for(int i = 0; i < Modules.Length; i++)
@@ -49,6 +53,10 @@ namespace ProjectAstroClass.BackgroundClasses
             }
         }
 
+        /// <summary>
+        /// Adds a Chassis
+        /// </summary>
+        /// <param name="inChassis"></param>
         void AddChassis(Chassis inChassis)
         {
             Chassis = inChassis;
@@ -74,7 +82,7 @@ namespace ProjectAstroClass.BackgroundClasses
         /// </summary>
         /// <param name="side"></param>
         /// <returns></returns>
-        bool CheckSides(char side)
+        bool CheckSidesMod(char side)
         {
             int sideCount = 0;
             for (int i = 0; i < Modules.Length; i++)

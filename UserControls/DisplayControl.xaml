@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:ProjectAstroClass.UserControls"
         mc:Ignorable="d"
         d:DesignWidth="225" d:DesignHeight="50" Margin="5,5">
-    <DockPanel x:Name="Casing" Height="{Binding DispHeight}" Width="215" Background="Beige">
-        <Label x:Name="titleDisp" Width="205" Margin="5" DockPanel.Dock="Top" Content="{Binding Title}" Background="AliceBlue" BorderBrush="Black" BorderThickness=".25" Foreground="Black"/>
+    <DockPanel x:Name="Casing" Height="{Binding DispHeight}" Width="215" Background="Beige" Margin="5,0,5,-47">
+        <TextBlock x:Name="titleDisp" Width="205" Margin="5" DockPanel.Dock="Top" Text="{Binding Title}" Background="AliceBlue" Foreground="Black"/>
         <TextBlock x:Name="descDisp" Width="205" Margin="5" DockPanel.Dock="Bottom" Text="{Binding Description}" Background="AliceBlue" Foreground="DarkSlateGray"/>
     </DockPanel>
 </UserControl>

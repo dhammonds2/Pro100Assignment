@@ -16,7 +16,7 @@ namespace ProjectAstroClass.BackgroundClasses
         public int DamageThreshold { get; set; }
         public char Direction { get; set; }
 
-        public Armor(string name, int index, string description, int moneyCost, int armorHP, int damageThreshold, char direction)
+        public Armor(string name, int index, string description, int moneyCost, int armorHP, int damageThreshold)
         {
             Name = name;
             Index = index;
@@ -24,7 +24,7 @@ namespace ProjectAstroClass.BackgroundClasses
             MoneyCost = moneyCost;
             ArmorHP = armorHP;
             DamageThreshold = damageThreshold;
-            Direction = direction;
+            Direction = ' ';
         }
     }
 }
