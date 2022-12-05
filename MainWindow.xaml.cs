@@ -704,7 +704,6 @@ namespace ProjectAstroClass
             int cIndex = 1035;
             char cType = 'M';
             char cSide = ' ';
-            cSide = GetSide();
 
             if (drone.sidesLeft == 0)
             {
