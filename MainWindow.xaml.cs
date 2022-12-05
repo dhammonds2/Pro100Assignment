@@ -105,11 +105,11 @@ namespace ProjectAstroClass
                 "However is prone to malfunction. Cost: 450\r\n", size, 1034, 'M', ref ownerIn);
             UserControls.DisplayControl Pumpd = new UserControls.DisplayControl("Pump", "Fires a high powered laser that can cut through things. Cost: 860\r\n", size, 1035, 'M', ref ownerIn);
             //Armor
-            UserControls.DisplayControl Opend = new UserControls.DisplayControl("Open Wiring", "[insert desc here]", size, 11, 'A', ref ownerIn);
-            UserControls.DisplayControl Carbond = new UserControls.DisplayControl("Carbon Fiber Shell", "[insert desc here]", size, 12, 'A', ref ownerIn);
-            UserControls.DisplayControl Steeld = new UserControls.DisplayControl("Aluminum Plating", "[insert desc here]", size, 13, 'A', ref ownerIn);
-            UserControls.DisplayControl Heavyd = new UserControls.DisplayControl("Thick Steel Armor", "[insert desc here]", size, 14, 'A', ref ownerIn);
-            UserControls.DisplayControl SPAd = new UserControls.DisplayControl("Shockproof Protection Plates", "[insert desc here]", size, 15, 'A', ref ownerIn);
+            UserControls.DisplayControl Opend = new UserControls.DisplayControl("Open Wiring", "No Armor No Cost", size, 11, 'A', ref ownerIn);
+            UserControls.DisplayControl Carbond = new UserControls.DisplayControl("Carbon Fiber Shell", "Standard Drone Shell\r\nDamage threshold [3]\r\nDamage Reactions: [Kinetic][Corrosive]\r\nHP [12]\r\nCost [10]\r\nWeight Class: Light\r\n", size, 12, 'A', ref ownerIn);
+            UserControls.DisplayControl Steeld = new UserControls.DisplayControl("Aluminum Plating", "Basic Drone Armor\r\nDamage threshold [6]\r\nDamage Reactions: [Heat][Corrosive]\r\nHP [10]\r\nCost [50]\r\nWeight Class: Light\r\n", size, 13, 'A', ref ownerIn);
+            UserControls.DisplayControl Heavyd = new UserControls.DisplayControl("Thick Steel Armor", "Steel Plating \r\nDamage threshold [12]\r\nDamage Reactions: [Heat][Cold]\r\nHP [18]\r\nCost [200]\r\nWeight Class: Medium\r\n", size, 14, 'A', ref ownerIn);
+            UserControls.DisplayControl SPAd = new UserControls.DisplayControl("Shockproof Protection Plates", "Inner Rubber Insulator Covered by Thin Steel Plating\r\nDamage threshold [8]\r\nDamage Reactions: [Electric][Corrosive]\r\nHP [6]\r\nCost [300]\r\nWeight Class: Medium\r\n", size, 15, 'A', ref ownerIn);
 
             //adding all displays to array
             displayControls[0] = Tempestd;
