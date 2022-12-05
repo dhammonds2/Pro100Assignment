@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjectAstroClass"
         mc:Ignorable="d"
         xmlns:uc="clr-namespace:ProjectAstroClass.UserControls"
-        Title="Project /\stro Drone Builder" Height="450" Width="800"
+        Title="Project /\stro Drone Builder" Height="450" Width="813"
         x:Name="Main_Window"
         Background="Beige"
         >
@@ -28,7 +28,7 @@
         <Button x:Name="viewBuild" HorizontalAlignment="Left" Width="63" Height="19" 
                 Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.506,0.588" Click="saveBuild">Save</Button>
         <ScrollViewer Grid.ColumnSpan="2" Margin="0,147,266,0">
-            <StackPanel x:Name="outList" Margin="10,10,10,10" Orientation="Vertical"/>
+            <StackPanel x:Name="outList" Margin="10,10,10,10" Orientation="Vertical" Background="LightBlue"/>
 
         </ScrollViewer>
         <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="Drone Name" VerticalAlignment="Top" Width="247" Height="48" FontFamily="Arial Black" FontSize="24" TextChanged="NameBox_TextChanged"/>
