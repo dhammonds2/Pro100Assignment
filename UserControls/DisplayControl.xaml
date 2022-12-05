@@ -8,8 +8,8 @@
         d:DesignWidth="220" d:DesignHeight="120
              " Margin="5,5">
     <DockPanel x:Name="Casing" Height="{Binding DispHeight}" Width="210" Background="Beige" Margin="5,0,5,5">
-        <TextBlock x:Name="titleDisp" Width="200" Margin="5" DockPanel.Dock="Top" Text="{Binding Title}" Background="LightGray" Foreground="Black"/>
+        <TextBlock x:Name="titleDisp" Width="200" Margin="5" DockPanel.Dock="Top" Text="{Binding Title}" Background="LightGray" Foreground="Black"   TextWrapping="Wrap"   FontSize="12"/>
         <Button DockPanel.Dock="Bottom" Width="50" Height="20" Content="Remove" Click="Button_Click"></Button>
-        <TextBlock x:Name="descDisp" Width="200" Margin="5" DockPanel.Dock="Bottom" Text="{Binding Description}" Background="LightGray" Foreground="DarkSlateGray"/>
+        <TextBlock x:Name="descDisp" DockPanel.Dock="Top" Text="{Binding Description}" Background="LightGray" Foreground="DarkSlateGray"   TextWrapping="Wrap"   FontSize="8.1" Height="69"/>
     </DockPanel>
 </UserControl>

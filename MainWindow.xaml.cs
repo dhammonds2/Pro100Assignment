@@ -66,13 +66,19 @@ namespace ProjectAstroClass
             UserControls.DisplayControl Accessd = new UserControls.DisplayControl("77 Access", "Permanent Module: Anti-Virus Software\n " +
                 "Keeps your drone safe from malware and viruses\n" +
                 "while interacting with unknown systems.", size, 2,'C', ref ownerIn);
-            UserControls.DisplayControl Streakerd = new UserControls.DisplayControl("Streaker Alpha", "[insert desc here]", size, 3, 'C', ref ownerIn);
-            UserControls.DisplayControl Maelstromd = new UserControls.DisplayControl("Maelstrom X70", "[insert desc here]", size, 4, 'C', ref ownerIn);
-            UserControls.DisplayControl ClockTowerd = new UserControls.DisplayControl("Clock Tower", "[insert desc here]", size, 5, 'C', ref ownerIn);
-            UserControls.DisplayControl DoubleTeamd = new UserControls.DisplayControl("DTT (Double Team) Barge", "[insert desc here]", size, 6, 'C', ref ownerIn);
+            UserControls.DisplayControl Streakerd = new UserControls.DisplayControl("Streaker Alpha", "Permanent Module - Magnet Core. When in vacuum environments you may choose to use your terrestrial move  \r\n" +
+                "score instead as long as there is a surface to attach to.\r\n\r\n", size, 3, 'C', ref ownerIn);
+            UserControls.DisplayControl Maelstromd = new UserControls.DisplayControl("Maelstrom X70", "Permanent Module - Expert Repairs\r\nRepairing can be done without materials, although it is unable to repair damage.\r\n", size, 4, 'C', ref ownerIn);
+            UserControls.DisplayControl ClockTowerd = new UserControls.DisplayControl("Clock Tower", "Permanent Module - Energy Field Generator (EFG) (Force Field)\r\n" +
+                "Large Energy shield is produced extending out 1 tile from the top of the drone, Granting all drones within a bonus of 20 to their armor’s damage threshold. \r\n" +
+                "Drone must be immobile while producing field.\r\n", size, 5, 'C', ref ownerIn);
+            UserControls.DisplayControl DoubleTeamd = new UserControls.DisplayControl("DTT (Double Team) Barge", "Permanent Module - Hover Connection\r\nYou don’t suffer a movement penalty when cargoing large objects.\r\n", size, 6, 'C', ref ownerIn);
             //Utilities 
-            UserControls.DisplayControl VISPd = new UserControls.DisplayControl("Variable Intra-strata Processor", "[insert desc here]", size, 1011, 'M', ref ownerIn);
-            UserControls.DisplayControl EFMUd = new UserControls.DisplayControl("Emergency Field Maintenance Unit", "[insert desc here]", size, 1012, 'M', ref ownerIn);
+            UserControls.DisplayControl VISPd = new UserControls.DisplayControl("Variable Intra-strata Processor", "An attachable processing unit that further analyzes visual data to provide trajectories, " +
+                "velocities, and other crucial data to the pilot, increasing a weapon’s accuracy to previously impractical distances. Cost: 150\r\n", size, 1011, 'M', ref ownerIn);
+            UserControls.DisplayControl EFMUd = new UserControls.DisplayControl("Emergency Field Maintenance Unit", "Considered a Freelancer's Best Friend, the EFMU gives drones a chance to continue operation in times of crisis." +
+                "By sacrificing the functionality of online modules," +
+                "the EFMU can reactivate critically damaged systems, buying the pilot valuable functionality in a mission. Should be used as a last resort. Cost: 400\r\n", size, 1012, 'M', ref ownerIn);
             UserControls.DisplayControl Auxd = new UserControls.DisplayControl("Auxiliary Capacitor", "[insert desc here]", size, 1013, 'M', ref ownerIn);
             UserControls.DisplayControl Bankd = new UserControls.DisplayControl("Power Bank", "[insert desc here]", size, 1014, 'M', ref ownerIn);
             UserControls.DisplayControl Plugd = new UserControls.DisplayControl("Interface Control Plug", "[insert desc here]", size, 1015, 'M', ref ownerIn);
@@ -82,7 +88,11 @@ namespace ProjectAstroClass
             UserControls.DisplayControl Tetherd = new UserControls.DisplayControl("Tether", "[insert desc here]", size, 1023, 'M', ref ownerIn);
             UserControls.DisplayControl RCSd = new UserControls.DisplayControl("Reaction Control System", "[insert desc here]", size, 1024, 'M', ref ownerIn);
             //Weaponry
-            UserControls.DisplayControl Welrodd = new UserControls.DisplayControl("Welrod", "[insert desc here]", size, 1031, 'M', ref ownerIn);
+            UserControls.DisplayControl Welrodd = new UserControls.DisplayControl("Welrod", "Designed purely with stealth in mind, the United Firearm Commission " +
+                "banded together to assemble an easy-to-manufacture sidearm that was as quiet " +
+                "as possible. Nearly undetectable in a vacuum and in atmosphere, " +
+                "the Welrod is the definition of a stealth weapon, with substantial killing " +
+                "power against biological life forms. Cost: 300", size, 1031, 'M', ref ownerIn);
             UserControls.DisplayControl Freizard = new UserControls.DisplayControl("Freizar", "[insert desc here]", size, 1032, 'M', ref ownerIn);
             UserControls.DisplayControl Sieged = new UserControls.DisplayControl("Siege", "[insert desc here]", size, 1033, 'M', ref ownerIn);
             UserControls.DisplayControl Flakd = new UserControls.DisplayControl("Flak", "[insert desc here]", size, 1034, 'M', ref ownerIn);
