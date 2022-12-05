@@ -103,7 +103,7 @@ namespace ProjectAstroClass
             UserControls.DisplayControl Flakd = new UserControls.DisplayControl("Flak", "A newer weapon with an “unconventional” approach to combat, the Nebula Flak Battery is designed to make aiming a cinch. " +
                 "The Nebula fires a net of shrapnel towards its targets, allowing it to deal devastating damage up close, or lay down suppressive fire from a (very limited) distance. " +
                 "However is prone to malfunction. Cost: 450\r\n", size, 1034, 'M', ref ownerIn);
-            UserControls.DisplayControl Pumpd = new UserControls.DisplayControl("Pump", "[insert desc here]", size, 1035, 'M', ref ownerIn);
+            UserControls.DisplayControl Pumpd = new UserControls.DisplayControl("Pump", "Fires a high powered laser that can cut through things. Cost: 860\r\n", size, 1035, 'M', ref ownerIn);
             //Armor
             UserControls.DisplayControl Opend = new UserControls.DisplayControl("Open Wiring", "[insert desc here]", size, 11, 'A', ref ownerIn);
             UserControls.DisplayControl Carbond = new UserControls.DisplayControl("Carbon Fiber Shell", "[insert desc here]", size, 12, 'A', ref ownerIn);
@@ -704,7 +704,6 @@ namespace ProjectAstroClass
             int cIndex = 1035;
             char cType = 'M';
             char cSide = ' ';
-            cSide = GetSide();
 
             if (drone.sidesLeft == 0)
             {
