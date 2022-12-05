@@ -15,14 +15,14 @@ namespace ProjectAstroClass.BackgroundClasses
         public int MoneyCost { get; set; }
         public char Direction { get; set; }
 
-        public Module(string name, int index, string description, int powerCost, int moneyCost)
-        {
-            Name = name;
-            Index = index;
-            Description = description;
-            PowerCost = powerCost;
-            MoneyCost = moneyCost;
-            Direction = ' ';
-        }
+        //public Module(string name, int index, string description, int powerCost, int moneyCost)
+        //{
+        //    Name = name;
+        //    Index = index;
+        //    Description = description;
+        //    PowerCost = powerCost;
+        //    MoneyCost = moneyCost;
+        //    Direction = ' ';
+        //}
     }
 }

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="ProjectAstroClass.UserControls.PopupControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectAstroClass.UserControls"
+        mc:Ignorable="d" d:DesignHeight="250" Width="335">
+    <DockPanel Background="Gray">
+        <TextBlock DockPanel.Dock="Top" Text="Choose a side for the module." TextWrapping="WrapWithOverflow" FontSize="20" Margin="20,20"></TextBlock>
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="Front" Grid.Column="0" Content="Front" Click="Front_Click" Margin="5"/>
+            <Button x:Name="Left" Grid.Column="1" Content="Left" Click="Left_Click" Margin="5"/>
+            <Button x:Name="Top" Grid.Column="2" FontSize="12" Content="Top" Click="Top_Click" Margin="5"/>
+            <Button x:Name="Back" Grid.Row="1" Grid.Column="0" FontSize="12" Content="Back" Click="Back_Click" Margin="5"/>
+            <Button x:Name="Right" Grid.Row="1" Grid.Column="1" FontSize="12" Content="Right" Click="Right_Click" Margin="5"/>
+            <Button x:Name="Bottom" Grid.Row="1" Grid.Column="2" FontSize="12" Content="Bottom" Click="Bottom_Click" Margin="5"/>
+
+        </Grid>
+    </DockPanel>
+</UserControl>

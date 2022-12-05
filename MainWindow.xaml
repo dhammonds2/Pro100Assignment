@@ -22,29 +22,34 @@
         <Grid.RowDefinitions>
 
         </Grid.RowDefinitions>
+        <Popup x:Name="directionPopup">
+            <uc:PopupControl x:Name="inerPop"></uc:PopupControl>
+        </Popup>
         <Button x:Name="viewBuild" HorizontalAlignment="Left" Width="63" Height="19" 
                 Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.506,0.588" Click="saveBuild">Save</Button>
-        <ListBox x:Name="outList" Margin="10,147,10,10">
-        </ListBox>
+        <ScrollViewer Grid.ColumnSpan="2" Margin="0,147,266,0">
+            <StackPanel x:Name="outList" Margin="10,10,10,10" Orientation="Vertical"/>
+
+        </ScrollViewer>
         <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="Drone Name" VerticalAlignment="Top" Width="247" Height="48" FontFamily="Arial Black" FontSize="24" TextChanged="NameBox_TextChanged"/>
         <DockPanel LastChildFill="False" Margin="10,87,10,292">
-            <TextBlock x:Name="CoreHP" TextWrapping="Wrap" Text="{Binding CoreHp}" Width="50" Background="DarkGray" Margin="18,0,15,0" Padding="5"/>
-            <TextBlock x:Name="Power" TextWrapping="Wrap" Text="{Binding Power}" Background="DarkGray" Width="50" Margin="15,0" Padding="5"/>
-            <TextBlock x:Name="PowerPerRound" TextWrapping="Wrap" Text="{Binding PPR}" Background="DarkGray"  Width="50" Margin="15,0" Padding="5"/>
+            <TextBlock x:Name="CoreHP" TextWrapping="Wrap" Text="{Binding drone.CoreHp}" Width="50" Background="DarkGray" Margin="18,0,15,0" Padding="5"/>
+            <TextBlock x:Name="Power" TextWrapping="Wrap" Text="{Binding drone.Power}" Background="DarkGray" Width="50" Margin="15,0" Padding="5"/>
+            <TextBlock x:Name="PowerPerRound" TextWrapping="Wrap" Text="{Binding drone.PPR}" Background="DarkGray"  Width="50" Margin="15,0" Padding="5"/>
             
         </DockPanel>
-        <Menu x:Name="DropMenu" Grid.Column="1" Margin="74,34,74,342">
-            <MenuItem x:Name="DropMenu1" Header="DT1">
-                <MenuItem Header="Chassis" >
-                    <MenuItem Header="Tempest 50 - Combat Chassis"></MenuItem>
-                    <MenuItem Header="77 Access - Technical Chassis"></MenuItem>
-                    <MenuItem Header="Streaker Alpha - Mobility Chassis"></MenuItem>
-                    <MenuItem Header="Maelstrom X70 - Maintenance Chassis"></MenuItem>
-                    <MenuItem Header="Clock Tower - Defense Chassis"></MenuItem>
-                    <MenuItem Header="DTT (Double Team) Barge - Cargo Chassis"></MenuItem>
+        <DockPanel Grid.Column="1">
+        <Menu x:Name="DropMenu" DockPanel.Dock="Top" Margin="74,34,74,74">
+                <MenuItem x:Name="CMenu" Header="Chassis" >
+                    <MenuItem x:Name="TE" Header="Tempest 50 - Combat Chassis" Click="TE_Click"></MenuItem>
+                    <MenuItem x:Name="AC" Header="77 Access - Technical Chassis" Click="AC_Click"></MenuItem>
+                    <MenuItem x:Name="ST" Header="Streaker Alpha - Mobility Chassis" Click="ST_Click"></MenuItem>
+                    <MenuItem x:Name="MA" Header="Maelstrom X70 - Maintenance Chassis" Click="MA_Click"></MenuItem>
+                    <MenuItem x:Name="CL" Header="Clock Tower - Defense Chassis" Click="CL_Click"></MenuItem>
+                    <MenuItem x:Name="DTT" Header="DTT (Double Team) Barge - Cargo Chassis" Click="DTT_Click"></MenuItem>
 
                 </MenuItem>
-                <MenuItem x:Name="MMenu" Header="Modules" >
+                <MenuItem x:Name="MMenu" Header="Modules" IsEnabled="{Binding drone.chassisChosen}" >
                     <MenuItem x:Name="UMenu" Header="Utility">
                         <MenuItem x:Name="VISP" Header="Variable Intra-Strata Processor (VISP)" Click="VISP_Click"></MenuItem>
                         <MenuItem x:Name="EFMU" Header="Emergency Field Maintenance Unit (EFMU)" Click="EFMU_Click"></MenuItem>
@@ -94,23 +99,51 @@
                             </MenuItem>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Armor" >
+                <MenuItem Header="Armor" IsEnabled="{Binding drone.chassisChosen}">
                     <!--<MenuItem Header="Carbon Fiber Shell - Standard Drone Shell with a Damage threshold of 3, Damage Reactions: [Kinetic] and [Corrosive], HP [12], Cost [10], Weight Class: Light"></MenuItem>-->
-                    <MenuItem Header="Open Wiring"></MenuItem>
-                    <MenuItem Header="Carbon Fiber Shell"></MenuItem>
-                    <MenuItem Header="Aluminum Plating"></MenuItem>
-                    <MenuItem Header="Thick Steel Armor"></MenuItem>
-                    <MenuItem Header="Shockproof Protection Plates (SPA)"></MenuItem>
-                    <MenuItem Header="Heavy Armor"></MenuItem>
-                    <MenuItem Header="Anti-Projectile Armor"></MenuItem>
-                    <MenuItem Header="Reactive Armor"></MenuItem>
-                    <MenuItem Header="Energy Armor"></MenuItem>
-                    <MenuItem Header="Reactive MK2 Armor"></MenuItem>
-                    <MenuItem Header="Advanced Composite Ceramic Armor 'Achilles'"></MenuItem>
+                    <MenuItem x:Name="OW" Header="Open Wiring" Click="OW_Click"></MenuItem>
+                    <MenuItem x:Name="CFS" Header="Carbon Fiber Shell" Click="CFS_Click"></MenuItem>
+                    <MenuItem x:Name="AP" Header="Aluminum Plating" Click="AP_Click"></MenuItem>
+                    <MenuItem x:Name="TSA" Header="Thick Steel Armor" Click="TSA_Click"></MenuItem>
+                    <MenuItem x:Name="SPP" Header="Shockproof Protection Plates (SPA)" Click="SPP_Click"></MenuItem>
+                    <MenuItem x:Name="HA" Header="Heavy Armor" Click="HA_Click"></MenuItem>
+                    <MenuItem x:Name="APA" Header="Anti-Projectile Armor" Click="APA_Click"></MenuItem>
+                    <MenuItem x:Name="RA" Header="Reactive Armor" Click="RA_Click"></MenuItem>
+                    <MenuItem x:Name="EA" Header="Energy Armor" Click="EA_Click"></MenuItem>
+                    <MenuItem x:Name="RA2" Header="Reactive MK2 Armor" Click="RA2_Click"></MenuItem>
+                    <MenuItem x:Name="Achi" Header="Advanced Composite Ceramic Armor 'Achilles'" Click="Achi_Click"></MenuItem>
                 </MenuItem>
 
-            </MenuItem>
         </Menu>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Module Slots Open:" Grid.Column="1"></Label>
+                        <TextBlock x:Name="sidesLeft" Text="{Binding drone.sidesLeft}" Grid.Column="1" Margin="20,40"/>
+
+                        <Label Content="Armor Slots Open:" Grid.Column="0"></Label>
+                        <TextBlock x:Name="armorSlots" Text="{Binding drone.armorLeft}" Grid.Column="0" Margin="20,40"/>
+
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid>
+                        
+                    </Grid>
+                </Grid>
+            </Grid>
+        </DockPanel>
 
 
 
