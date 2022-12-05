@@ -79,14 +79,16 @@ namespace ProjectAstroClass
             UserControls.DisplayControl EFMUd = new UserControls.DisplayControl("Emergency Field Maintenance Unit", "Considered a Freelancer's Best Friend, the EFMU gives drones a chance to continue operation in times of crisis." +
                 "By sacrificing the functionality of online modules," +
                 "the EFMU can reactivate critically damaged systems, buying the pilot valuable functionality in a mission. Should be used as a last resort. Cost: 400\r\n", size, 1012, 'M', ref ownerIn);
-            UserControls.DisplayControl Auxd = new UserControls.DisplayControl("Auxiliary Capacitor", "[insert desc here]", size, 1013, 'M', ref ownerIn);
-            UserControls.DisplayControl Bankd = new UserControls.DisplayControl("Power Bank", "[insert desc here]", size, 1014, 'M', ref ownerIn);
-            UserControls.DisplayControl Plugd = new UserControls.DisplayControl("Interface Control Plug", "[insert desc here]", size, 1015, 'M', ref ownerIn);
+            UserControls.DisplayControl Auxd = new UserControls.DisplayControl("Auxiliary Capacitor", "Effective in its simplicity, an Auxiliary Capacitor simply provides a drone with a short burst of extra power, which can be vital in hairy situations." +
+                "It should be noted that a capacitor is not a battery, however, and cannot store extra charge reliably.\r\nCost: 300\r\n", size, 1013, 'M', ref ownerIn);
+            UserControls.DisplayControl Bankd = new UserControls.DisplayControl("Power Bank", "Two batteries connected to the core. Perfect for powering extra utilities or other things requiring a charge. \r\nCost: 100\r\n", size, 1014, 'M', ref ownerIn);
+            UserControls.DisplayControl Plugd = new UserControls.DisplayControl("Interface Control Plug", " A plug appendage sticks out and connects to a port on the side of a terminal.\r\nCost: 350\r\n", size, 1015, 'M', ref ownerIn);
             //Mobility
-            UserControls.DisplayControl Wheelsd = new UserControls.DisplayControl("Wheels/Treads", "[insert desc here]", size, 1021, 'M', ref ownerIn);
-            UserControls.DisplayControl Limbsd = new UserControls.DisplayControl("Limbs", "[insert desc here]", size, 1022, 'M', ref ownerIn);
-            UserControls.DisplayControl Tetherd = new UserControls.DisplayControl("Tether", "[insert desc here]", size, 1023, 'M', ref ownerIn);
-            UserControls.DisplayControl RCSd = new UserControls.DisplayControl("Reaction Control System", "[insert desc here]", size, 1024, 'M', ref ownerIn);
+            UserControls.DisplayControl Wheelsd = new UserControls.DisplayControl("Wheels/Treads", "Allows full movement when in Terrestrial environments. Cost: 50\r\n", size, 1021, 'M', ref ownerIn);
+            UserControls.DisplayControl Limbsd = new UserControls.DisplayControl("Limbs", "Allows effective movement in Terrestrial environments " +
+                "Comes with two legs per attachment.\r\nCost: 75\r\n", size, 1022, 'M', ref ownerIn);
+            UserControls.DisplayControl Tetherd = new UserControls.DisplayControl("Tether", "Allows effective movement in Stellar environments, Can attach to surfaces up to 8 tiles away and drag in either drone to surface or surface to drone. Cost: 75\r\n", size, 1023, 'M', ref ownerIn);
+            UserControls.DisplayControl RCSd = new UserControls.DisplayControl("Reaction Control System", "A tried and true classic system of navigating in microgravity environments. By using multiple thrusters pointed in different directions your drone is capable of achieving any orientation and going where no drone has gone before. \r\nCost: 300\r\n", size, 1024, 'M', ref ownerIn);
             //Weaponry
             UserControls.DisplayControl Welrodd = new UserControls.DisplayControl("Welrod", "Designed purely with stealth in mind, the United Firearm Commission " +
                 "banded together to assemble an easy-to-manufacture sidearm that was as quiet " +
