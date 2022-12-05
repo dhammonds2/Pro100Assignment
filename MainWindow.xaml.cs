@@ -63,7 +63,7 @@ namespace ProjectAstroClass
             UserControls.DisplayControl Tempestd = new UserControls.DisplayControl("Tempest 50", "Permanent Module: Expert Repairs\n" +
                 "Repairing can be done without materials,\n" +
                 "although unable to repair damage.", size, 1 ,'C', ref ownerIn);
-            UserControls.DisplayControl Accessd = new UserControls.DisplayControl("77 Access", "Permanent Module: Anti-Virus Software\n " +
+            UserControls.DisplayControl Accessd = new UserControls.DisplayControl("77 Access", "Permanent Module: Anti-Virus Software\n" +
                 "Keeps your drone safe from malware and viruses\n" +
                 "while interacting with unknown systems.", size, 2,'C', ref ownerIn);
             UserControls.DisplayControl Streakerd = new UserControls.DisplayControl("Streaker Alpha", "Permanent Module - Magnet Core. When in vacuum environments you may choose to use your terrestrial move  \r\n" +
@@ -95,9 +95,14 @@ namespace ProjectAstroClass
                 "as possible. Nearly undetectable in a vacuum and in atmosphere, " +
                 "the Welrod is the definition of a stealth weapon, with substantial killing " +
                 "power against biological life forms. Cost: 300", size, 1031, 'M', ref ownerIn);
-            UserControls.DisplayControl Freizard = new UserControls.DisplayControl("Freizar", "[insert desc here]", size, 1032, 'M', ref ownerIn);
-            UserControls.DisplayControl Sieged = new UserControls.DisplayControl("Siege", "[insert desc here]", size, 1033, 'M', ref ownerIn);
-            UserControls.DisplayControl Flakd = new UserControls.DisplayControl("Flak", "[insert desc here]", size, 1034, 'M', ref ownerIn);
+            UserControls.DisplayControl Freizard = new UserControls.DisplayControl("Freizar", "The Freizar Cannonette, equipped with the legendary Armor-Piercing Cannon is specifically designed to give armored targets a really bad time. " +
+                "By accelerating a small arrow-like projectile to about 8 times the speed of sound, the impact becomes immense, liquifying the metal of all components and turning it into shrapnel. " +
+                "Cost: 750", size, 1032, 'M', ref ownerIn);
+            UserControls.DisplayControl Sieged = new UserControls.DisplayControl("Siege", "The “Siege” is the favorite of pilots who like destruction. The ammunition of this weapon is rather large, allowing for only one shot to be stored in the barrel." +
+                " Not only will this weapon knock back anything in its path the user will be shoved backwards as well. Cost: 600\r\n", size, 1033, 'M', ref ownerIn);
+            UserControls.DisplayControl Flakd = new UserControls.DisplayControl("Flak", "A newer weapon with an “unconventional” approach to combat, the Nebula Flak Battery is designed to make aiming a cinch. " +
+                "The Nebula fires a net of shrapnel towards its targets, allowing it to deal devastating damage up close, or lay down suppressive fire from a (very limited) distance. " +
+                "However is prone to malfunction. Cost: 450\r\n", size, 1034, 'M', ref ownerIn);
             UserControls.DisplayControl Pumpd = new UserControls.DisplayControl("Pump", "[insert desc here]", size, 1035, 'M', ref ownerIn);
             //Armor
             UserControls.DisplayControl Opend = new UserControls.DisplayControl("Open Wiring", "[insert desc here]", size, 11, 'A', ref ownerIn);
